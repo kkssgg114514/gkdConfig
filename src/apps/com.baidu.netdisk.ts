@@ -8,6 +8,7 @@ export default defineGkdApp({
       key: 0,
       name: '开屏广告',
       desc: '点击左上或右上圆圈“跳过”按钮',
+      activityIds: '.ui.Navigate',
       fastQuery: true,
       forcedTime: 10_000,
       matchRoot: true,
@@ -37,18 +38,25 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          matches: '([text*="广告"][visibleToUser=true]) && (@[parent=null])',
+          matches:
+            '[name="android.view.View"][clickable=true][left<220][top<400][width<220][height<220][visibleToUser=true]',
+        },
+        {
+          key: 3,
+          matches:
+            '([text*="立即进入"][visibleToUser=true]) && ([text*="向上滑动"][visibleToUser=true]) && (@[parent=null])',
           position: {
-            left: 'width*0.08',
+            left: 'width*0.10',
             top: 'height*0.10',
           },
         },
         {
-          key: 3,
-          matches: '([text*="广告"][visibleToUser=true]) && (@[parent=null])',
+          key: 4,
+          matches:
+            '([text*="转动手机"][visibleToUser=true]) && ([text*="今日推荐"][visibleToUser=true]) && (@[parent=null])',
           position: {
-            right: 'width*0.06',
-            top: 'height*0.10',
+            right: 'width*0.08',
+            top: 'height*0.08',
           },
         },
       ],
