@@ -23,9 +23,22 @@ export default defineGkdApp({
             '[id="com.greenpoint.android.mc10086.activity:id/top_view_right_operation"][clickable=true][visibleToUser=true]',
             '[vid="top_view_right_operation"][clickable=true][visibleToUser=true]',
           ],
+          position: {
+            right: 'width*0.16',
+            top: 'height*0.5',
+          },
         },
         {
           key: 1,
+          matches:
+            '([vid="top_view_right_operation"][visibleToUser=true]) && ([vid="image"][clickable=true][visibleToUser=true][width>1000][height>2000]) && (@[parent=null])',
+          position: {
+            right: 'width*0.05',
+            top: 'height*0.09',
+          },
+        },
+        {
+          key: 2,
           anyMatches: [
             '@[clickable=true] > [text="跳过"][visibleToUser=true]',
             '@[clickable=true] > [desc="跳过"][visibleToUser=true]',
