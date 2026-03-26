@@ -35,6 +35,22 @@ export default defineGkdApp({
             '[desc*="跳过"][desc.length<8][width<300 && height<200][visibleToUser=true]',
           ],
         },
+        {
+          key: 2,
+          matches: '([text*="广告"][visibleToUser=true]) && (@[parent=null])',
+          position: {
+            left: 'width*0.08',
+            top: 'height*0.10',
+          },
+        },
+        {
+          key: 3,
+          matches: '([text*="广告"][visibleToUser=true]) && (@[parent=null])',
+          position: {
+            right: 'width*0.06',
+            top: 'height*0.10',
+          },
+        },
       ],
     },
   ],
