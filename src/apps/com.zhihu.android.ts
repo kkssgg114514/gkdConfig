@@ -8,6 +8,7 @@ export default defineGkdApp({
       key: 0,
       name: '开屏广告',
       desc: '点击右上角跳过按钮',
+      activityIds: '.app.ui.activity.LauncherActivity',
       fastQuery: true,
       forcedTime: 10_000,
       matchRoot: true,
@@ -18,11 +19,6 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          excludeActivityIds: [
-            '.app.SearchActivity',
-            '.comment.ui.activity.CommentListActivity',
-            '.feature.short_container_feature.ui.ShortContainerHostActivity',
-          ],
           anyMatches: [
             '@[clickable=true] > [vid="btn_skip"][visibleToUser=true]',
             '@[clickable=true] > [text*="跳过"][text.length<8][visibleToUser=true]',
@@ -32,16 +28,17 @@ export default defineGkdApp({
         {
           key: 1,
           action: 'clickCenter',
-          excludeActivityIds: [
-            '.app.SearchActivity',
-            '.comment.ui.activity.CommentListActivity',
-            '.feature.short_container_feature.ui.ShortContainerHostActivity',
-          ],
           anyMatches: [
             '[vid="btn_skip"][visibleToUser=true]',
             '[text*="跳过"][text.length<8][width<300 && height<200][visibleToUser=true]',
             '[desc*="跳过"][desc.length<8][width<300 && height<200][visibleToUser=true]',
           ],
+        },
+        {
+          key: 2,
+          action: 'clickCenter',
+          matches:
+            '([id="com.zhihu.android:id/launch_layout"][clickable=true][visibleToUser=true]) && ([text="向上滑动"][visibleToUser=true]) && ([text*="跳转至详情页"][visibleToUser=true]) && ([name="android.view.View"][clickable=true][right>1000][top<520][width<180][height<180][visibleToUser=true])',
         },
       ],
     },
