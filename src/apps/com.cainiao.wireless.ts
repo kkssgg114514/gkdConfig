@@ -34,6 +34,12 @@ export default defineGkdApp({
             '@[desc*="跳过"][visibleToUser=true]',
           ],
         },
+        {
+          key: 2,
+          action: 'clickCenter',
+          matches:
+            '[name="android.view.View"][clickable=true][right>980][top<520][width<220][height<220][visibleToUser=true]',
+        },
       ],
     },
   ],
