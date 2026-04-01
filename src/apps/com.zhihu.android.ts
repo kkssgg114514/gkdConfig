@@ -40,6 +40,12 @@ export default defineGkdApp({
           matches:
             '([id="com.zhihu.android:id/launch_layout"][clickable=true][visibleToUser=true]) && ([text="向上滑动"][visibleToUser=true]) && ([text*="跳转至详情页"][visibleToUser=true]) && ([name="android.view.View"][clickable=true][right>1000][top<520][width<180][height<180][visibleToUser=true])',
         },
+        {
+          key: 3,
+          action: 'clickCenter',
+          matches:
+            '([id="com.zhihu.android:id/launch_layout"][visibleToUser=true]) && ([name="android.view.View"][clickable=true][right>980][top<520][width<220][height<220][visibleToUser=true])',
+        },
       ],
     },
   ],
