@@ -8,6 +8,7 @@ export default defineGkdApp({
       key: 0,
       name: '开屏广告',
       desc: '点击右上角圆圈“跳过”按钮',
+      activityIds: '.homepage.view.activity.AdsActivity',
       fastQuery: true,
       forcedTime: 10_000,
       matchRoot: true,
@@ -38,7 +39,7 @@ export default defineGkdApp({
           key: 2,
           action: 'clickCenter',
           matches:
-            '[name="android.view.View"][clickable=true][right>980][top<520][width<220][height<220][visibleToUser=true]',
+            '([vid="homesplash"][visibleToUser=true]) && ([vid="third_splash_bottom_layout"][visibleToUser=true]) && ([name="android.view.View"][clickable=true][right>1000][top<360][width<180][height<180][visibleToUser=true])',
         },
       ],
     },
