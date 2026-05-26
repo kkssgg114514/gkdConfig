@@ -35,6 +35,11 @@ export default defineGkdApp({
             '@[desc*="跳过"][visibleToUser=true]',
           ],
         },
+        {
+          key: 2,
+          matches:
+            '([vid="contentTv"][text*="向上滑动"][visibleToUser=true]) && (@[name="android.view.View"][clickable=true][left>900][top<320][width<260][height<160][visibleToUser=true])',
+        },
       ],
     },
   ],

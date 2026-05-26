@@ -59,6 +59,12 @@ export default defineGkdApp({
             top: 'height*0.08',
           },
         },
+        {
+          key: 5,
+          action: 'clickCenter',
+          matches:
+            '[vid="ms_skipView"][left>900][top<320][width<180][height<180][visibleToUser=true]',
+        },
       ],
     },
   ],
