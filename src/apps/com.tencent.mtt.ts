@@ -38,7 +38,11 @@ export default defineGkdApp({
         {
           key: 2,
           matches:
-            '([vid="contentTv"][text*="向上滑动"][visibleToUser=true]) && (@[name="android.view.View"][clickable=true][left>900][top<320][width<260][height<160][visibleToUser=true])',
+            '([vid="contentTv"][text*="向上滑动"][visibleToUser=true]) && (@[parent=null])',
+          position: {
+            right: 'width*0.11',
+            top: 'height*0.08',
+          },
         },
       ],
     },
