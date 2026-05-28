@@ -12,7 +12,19 @@ export default defineGkdApp({
       matchTime: 10_000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[id="com.taobao.taobao:id/close"]',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="com.taobao.taobao:id/close"]',
+        },
+        {
+          key: 1,
+          anyMatches: [
+            '[vid="ll_close"][clickable=true][visibleToUser=true] > [vid="tv_close"][text="跳过"][visibleToUser=true]',
+            '[id="com.taobao.taobao:id/ll_close"][clickable=true][visibleToUser=true] > [id="com.taobao.taobao:id/tv_close"][text="跳过"][visibleToUser=true]',
+          ],
+        },
+      ],
     },
   ],
 });
