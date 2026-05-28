@@ -31,5 +31,24 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '打卡后广告',
+      desc: '点击广告弹窗右上角关闭按钮',
+      activityIds: 'com.alibaba.lightapp.runtime.ariver.TheOneActivityMainTask',
+      fastQuery: true,
+      matchRoot: true,
+      matchTime: 10_000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      rules: {
+        matches:
+          '([vid="title"][text="格数科技"][visibleToUser=true]) && ([vid="h5_web_content"][visibleToUser=true]) && (@[parent=null])',
+        position: {
+          right: 'width*0.16',
+          top: 'height*0.17',
+        },
+      },
+    },
   ],
 });
