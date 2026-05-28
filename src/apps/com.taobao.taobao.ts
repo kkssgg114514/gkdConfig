@@ -20,8 +20,8 @@ export default defineGkdApp({
         {
           key: 1,
           anyMatches: [
-            '[vid="ll_close"][clickable=true][visibleToUser=true] > [vid="tv_close"][text="跳过"][visibleToUser=true]',
-            '[id="com.taobao.taobao:id/ll_close"][clickable=true][visibleToUser=true] > [id="com.taobao.taobao:id/tv_close"][text="跳过"][visibleToUser=true]',
+            '@[vid="ll_close"][clickable=true][visibleToUser=true] > [vid="tv_close"][text="跳过"][visibleToUser=true]',
+            '@[id="com.taobao.taobao:id/ll_close"][clickable=true][visibleToUser=true] > [id="com.taobao.taobao:id/tv_close"][text="跳过"][visibleToUser=true]',
           ],
         },
       ],
