@@ -39,6 +39,12 @@ export default defineGkdApp({
           key: 2,
           action: 'clickCenter',
           matches:
+            '[vid="ms_skipView"][left>900][top<320][width<180][height<180][visibleToUser=true]',
+        },
+        {
+          key: 3,
+          action: 'clickCenter',
+          matches:
             '([vid="homesplash"][visibleToUser=true]) && ([vid="third_splash_bottom_layout"][visibleToUser=true]) && ([name="android.view.View"][clickable=true][right>1000][top<360][width<180][height<180][visibleToUser=true])',
         },
       ],
