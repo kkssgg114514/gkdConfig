@@ -38,8 +38,10 @@ export default defineGkdApp({
         {
           key: 2,
           action: 'clickCenter',
-          matches:
-            '([text*="向上滑动"][visibleToUser=true]) && ([name="android.view.View"][clickable=true][right>950][top<320][width<240][height<140][visibleToUser=true])',
+          matches: [
+            '[text*="向上滑动"][visibleToUser=true]',
+            '@[name="android.view.View"][clickable=true][right>950][top<320][width<240][height<140][visibleToUser=true]',
+          ],
         },
         {
           key: 3,
